@@ -1,0 +1,1382 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	font-family: arial;
+	background-color: #000;
+	cursor: default;
+}
+
+.logoImage{
+	position: relative;
+	width: 40px;
+	animation: left-in 0.5s ease-in forwards;
+	height: 40px;
+}
+
+.logoName{
+	float: right;
+	position: relative;
+	top: 1vh;
+	animation: left-in 0.5s ease-in forwards;
+	margin-left: 2.5px;
+}
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	background-color: #000;
+}
+
+.logo{
+	color: rgb(226,226,226);
+	font-size: 15px;
+}
+
+.nav-links{
+	display: flex;
+	justify-content: space-around;
+	width: 25%;
+}
+
+li.active a{
+	color: #228FCF;
+}
+
+li a:hover{
+	color: #228FCF;
+}
+
+.nav-links li{
+	list-style: none;
+	animation: left-in 0.5s ease-in forwards;
+}
+
+.nav-links a{
+	color: rgb(226,226,226);
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.burger{
+	display: none;
+	cursor: pointer;
+	animation: left-in 0.5s ease-in forwards;
+}
+
+.burger div{
+	width: 15px;
+	height: 2px;
+	background-color: rgb(226,226,226);
+	margin: 2px;
+	transition: all 0.2s ease;
+}
+
+.bg-modal{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0,0,0,0.7);
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	position: fixed;
+	display: none;
+}
+
+.modal-content{
+	width: 500px;
+	height: 300px;
+	background-color: #FFF;
+	border-radius: 4px;
+	text-align: center;
+	padding: 20px;
+	position: fixed;
+}
+
+.check{
+	height: 60px;
+	width: 60px;
+	margin-top: 15px;
+}
+
+.text{
+	font-size: 30px;
+	margin-top: 50px;
+}
+
+.close{
+	position: absolute;
+	top: 0;
+	right: 14px;
+	font-size: 42px;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+
+.banners{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	top: 8vh;
+	overflow: hidden;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(banner1.jpg);
+	animation: fade-in 2s ease-in, slide 10s infinite;
+}
+
+.section2{
+	background-color: #222;
+	height: 93vh;
+	position: relative;
+	width: 100%;
+}
+
+.sectionAbout{
+	background-color: #222;
+	height: 93vh;
+	position: relative;
+	width: 100%;
+}
+
+.content{
+	position: relative;
+	width: 80%;
+	top: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	transform: translate(0, -50%);
+	text-align: center;
+	color: rgb(226,226,226);
+	height: 65%;
+	width: 80%;
+}
+
+.title{
+	font-weight: bold;
+	font-size: 35px;
+}
+
+.para{
+	margin-top: 15px;
+	font-size: 25px;
+}
+
+.section3{
+	background-color: #262626;
+	height: 93vh;
+	position: relative;
+	width: 100%;
+}
+
+.swiper-container {
+    width: 100%;
+	z-index: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide{
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+	height: 380px;
+	background: #373535;
+}
+
+.swiper-slide .imgBx{
+	width: 100%;
+	height: 300px;
+}
+
+.swiper-slide .imgBx img{
+	width: 100%;
+}
+
+.swiper-slide .details{
+	box-sizing: border-box;
+	padding: 20px;
+	background: #FFF;
+}
+
+.swiper-slide .details h3{
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	text-align: center;
+	line-height: 20px;
+}
+
+.swiper-slide .details h3 span{
+	font-size: 16px;
+}
+
+:root {
+    --swiper-theme-color: #228FCF;
+}
+
+img{
+	width: 300px;
+	height: 300px;
+}
+
+.itemTitle{
+	text-align: center;
+	color: #FFF;
+	text-shadow: 2px 2px #A2A2A2;
+	margin-bottom: 30px;
+	font-size: 50px;
+}
+
+.shopCardNovel1{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardNovel1.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardNovel2 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardNovel2.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardNovel3 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardNovel3.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardNovel4 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardNovel4.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardNovel5 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardNovel5.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardNovel6 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardNovel6.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardNovel7 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardNovel7.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardNovel8 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardNovel8.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardNovel9 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardNovel9.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardNovel10 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardNovel10.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFurniture1 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFurniture1.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFurniture2 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFurniture2.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFurniture3 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFurniture3.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFurniture4 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFurniture4.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFurniture5 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFurniture5.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFurniture6 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFurniture6.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFurniture7 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFurniture7.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFurniture8 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFurniture8.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFurniture9 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFurniture9.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFurniture10 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFurniture10.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardAppliances1 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardAppliances1.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardAppliances2 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardAppliances2.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardAppliances3 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardAppliances3.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardAppliances4 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardAppliances4.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardAppliances5 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardAppliances5.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardAppliances6 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardAppliances6.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardAppliances7 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardAppliances7.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardAppliances8 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardAppliances8.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardAppliances9 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardAppliances9.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardAppliances10 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardAppliances10.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFV1 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFV1.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFV2 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFV2.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFV3 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFV3.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFV4 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFV4.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFV5 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFV5.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFV6 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFV6.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFV7 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFV7.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFV8 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFV8.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFV9 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFV9.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardFV10 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardFV10.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardVG1 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardVG1.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardVG2 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardVG2.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardVG3 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardVG3.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardVG4 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardVG4.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardVG5 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardVG5.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardVG6 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardVG6.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardVG7 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardVG7.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardVG8 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardVG8.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardVG9 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardVG9.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardVG10 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardVG10.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardGadget1 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardGadget1.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardGadget2 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardGadget2.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardGadget3 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardGadget3.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardGadget4 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardGadget4.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardGadget5 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardGadget5.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardGadget6 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardGadget6.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardGadget7 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardGadget7.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardGadget8 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardGadget8.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardGadget9 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardGadget9.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.shopCardGadget10 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 0.3s;
+}
+
+.shopCardGadget10.is-flipped {
+	transform: translateX(-100%) rotateY(180deg);
+}
+
+.card__face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 40px;
+}
+
+.card__face--back {
+	position: relative;
+	transform: rotateY(180deg);
+	padding: 10px;
+	background: #FFF;
+	text-align: center;
+}
+
+.content2{
+	position: relative;
+	top: 25%;
+	z-index: 0;
+}
+
+.pick{
+	position: relative;
+	width: 150px;
+	color: #000;
+	height: 50px;
+	margin-top: 20px;
+	border: 1px solid #262626;
+	border-radius: 4px;
+	font-size: 18px;
+	transition: .6s;
+	overflow: hidden;
+}
+
+.pick2{
+	position: relative;
+	width: 150px;
+	color: #000;
+	height: 50px;
+	margin-top: 10px;
+	border-radius: 4px;
+	border: 1px solid #262626;
+	font-size: 18px;
+	transition: .6s;
+	overflow: hidden;
+}
+
+button:focus{
+	outline: none;
+	z-index: 1;
+}
+
+button:hover{
+	background: #222;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.section4{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 93vh;
+	text-align: center;
+	background: #262626;
+}
+
+.content3{
+	position: relative;
+	top: 17%;
+}
+
+.container{
+	width: 1000px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+.container .card{
+	position: relative;
+	width: 300px;
+	z-index: 0;
+	height: 200px;
+}
+
+.container .card .face{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+}
+
+.container .card .face.face1{
+	background: #333;
+	z-index: 1;
+	transform-origin: bottom;
+}
+
+.container .card .face.face1 img{
+	max-width: 100px;
+}
+
+.container .card .face.face1 h3{
+	margin: 3px 0 0;
+	color: rgb(226,226,226);
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.container .card:hover .face.face1{
+	transform: translateY(-100%) rotateX(90deg);
+	background: #228FCF;
+}
+
+.container .card .face.face2{
+	background: #FFF;
+	display: flex;
+	padding: 20px;
+	transform-origin: top;
+	transform: translateY(100%) rotateX(90deg);
+}
+
+.container .card:hover .face.face2{
+	transform: translateY(0) rotateX(0deg);
+}
+
+.info{
+	color: #000;
+}
+
+.dev{
+	height: 100px;
+}
+
+.dev_pic{
+	border-radius: 50%;
+	border: 2px solid #000;
+	height: 100px;
+	width: 100px;
+}
+
+.dev_content{
+	position: relative;
+    top: 4.5%;
+	left: 7%;
+}
+
+.info1{
+	color: #000;
+	margin-top: 10px;
+}
+
+.info2{
+	color: #000;
+	font-size: 15px;
+}
+
+@media screen and (max-width: 991px){
+	body{
+		overflow-x: hidden;
+	}
+	
+	.title{
+		font-weight: bold;
+		font-size: 25px;
+	}
+
+	.para{
+		margin-top: 15px;
+		font-size: 15px;
+	}
+	
+	.nav-links{
+		width: 30%;
+	}
+	
+	.nav-links a{
+		font-size: 10px;
+	}
+	
+	.logoImage{
+		width: 20px;
+		height: 20px;
+	}
+	
+	.logoName{
+		font-size: 13px;
+	}
+	
+	.logo{
+		font-size: 10px;
+	}
+	
+	.nav-links{
+		position: absolute;
+		right: 0px;
+		height: 92vh;
+		z-index: 1;
+		top: 8vh;
+		background-color: #000;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 35%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+	}
+	
+	.nav-links li{
+		opacity: 0;
+	}
+	
+	.burger{
+		display: block;
+	}
+	
+	.section3{
+		height: 150vh;
+	}
+	
+	.section2{
+		height: 150vh;
+	}
+	
+	.swiper-container {
+		padding-top: 10px;
+	}
+	
+	.container .card{
+		width: 200px;
+		height: 200px;
+	}
+	
+	.dev_content{
+		left: 0%;
+	}
+	
+	.container{
+		width: 700px;
+	}
+	
+	.info{
+		top: 5%;
+	}
+	
+	#content3{
+		top: 5%;
+	}
+	
+	.modal-content{
+		width: 300px;
+		height: 300px;
+	}
+	
+	.text{
+		font-size: 25px;
+		margin-top: 50px;
+	}
+	
+	.check{
+		height: 55px;
+		width: 55px;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.container{
+		display: inline;
+		margin-bottom: 20px;
+	}
+	
+	.card{
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 30px;
+	}
+	
+	.content{
+		width: 95%;
+	}
+}
+
+.nav-active{
+	transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+	from{
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	
+	to{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+@keyframes slide{
+	0%,100%{
+		background-image: url(banner1.jpg);
+	}
+	
+	25%{
+		background-image: url(banner2.jpg);
+	}
+	
+	50%{
+		background-image: url(banner3.jpg);
+	}
+	
+	75%{
+		background-image: url(banner4.jpg);
+	}
+}
+
+@keyframes fade-in{
+	
+	0%{
+		opacity: 0;
+	}
+	
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes left-in{
+	
+	0%{
+		transform: translateX(-200px);
+		opacity: 0;
+	}
+	
+	100%{
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+
+.toggle .line1{
+	transform: rotate(-45deg) translate(-3.2px,4px);
+}
+
+.toggle .line2{
+	opacity: 0;
+}
+
+.toggle .line3{
+	transform: rotate(45deg) translate(-2px,-2px);
+}
+
